@@ -20,7 +20,7 @@
         function load() {
             var map = new google.maps.Map(document.getElementById("map"), {
                 center: new google.maps.LatLng(55, -3),
-                zoom: 6,
+                zoom: 5,
                 mapTypeId: 'roadmap'
             });
             var infoWindow = new google.maps.InfoWindow;
@@ -80,7 +80,7 @@
 </head>
 
 <body onload="load()">
-<div id="map" style="width:450px;height:450px;background:snow"></div>
+<div id="map" style="width:425px;height:425px;background:snow"></div>
 </body>
 
 </html>
