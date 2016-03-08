@@ -2,11 +2,8 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon"
-          type="image/png"
-          href="assets/b&bicon.png">
-    <link type="text/css" rel="stylesheet" href="style.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <title>Search Results: theB&Bhub</title>
 </head>
