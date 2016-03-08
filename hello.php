@@ -9,9 +9,8 @@
 
 
 echo "Hello World!!!";
-
-
-
+/*
+//mysql code
 $db = new mysqli(
     "bbsqldb.database.windows.net",
     "teamdsqldb",
@@ -32,32 +31,31 @@ if (!$result) {
 }
 // iterate over $result object one $row at a time
 // use fetch_array() to return an associative array
-/*
+
 while($row = $result->fetch_array()){
     // print out fields from row of data
     echo $row['bbname'] . "<br>";
 }
 
-
 */
 
-
-/*
-    $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = "SQL_BB", "teamdsqldb", "Sql20022016*");
+//sql code
+    $conn = new PDO ( "sqlsrv:server = tcp:bbsqldb.database.windows.net,1433; Database = SQL_BB", "teamdsqldb", "Sql20022016*");
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     try {
         $st = $conn->query("SELECT [bbname],[latitude], [longitude] FROM [B&B] WHERE [city] = 'Aberdeen'");
 
         foreach ($st->fetchAll() as $row) {
 
-            echo($row['bbname']);
-            echo($row['latitude']);
-            echo($row['longitude']);
+           }
+        echo ($row [bbname]);
+        echo ($row [latitude]);
+        echo ($row [longitude]);
 
-        }
+ }
+    catch(PDOException $e)
+    {print"$e";}
 
-
-*/
 ?>
 
 </p>
