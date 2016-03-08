@@ -5,7 +5,7 @@
     <title></title>
 </head>
 <body>
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"
+<script src="https://maps.googleapis.com/maps/api/js"
         type="text/javascript"></script>
 <script type="text/javascript">
 
