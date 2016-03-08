@@ -1,79 +1,51 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<!DOCTYPE html >
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>PHP/MySQL & Google Maps Example</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"
+            type="text/javascript"></script>
+    <script type="text/javascript">
+        //<![CDATA[
 
-
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <title>Search Results: theB&Bhub</title>
-</head>
-<body>
-
-
-
-
-
-
-
-
-<section class="googlemap" id="mapapi">
-
-
-    <h1>My First Google Map</h1>
-
-    <div id="map" style="width:400px;height:400px;background:snow"></div>
-
-
-
-    <script>
-        var mapCanvas = document.getElementById("map");
-        var mapOptions = {
-            center: new google.maps.LatLng(51.5, -0.2), zoom: 10
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // Change this depending on the name of your PHP file
-        downloadUrl("hello.php", function(data) {
-            var xml = data.responseXML;
-            var markers = xml.documentElement.getElementsByTagName("marker");
-            for (var i = 0; i < markers.length; i++) {
-                var name = markers[i].getAttribute("name");
-                var address = markers[i].getAttribute("address");
-                var type = markers[i].getAttribute("type");
-                var point = new google.maps.LatLng(
-                    parseFloat(markers[i].getAttribute("lat")),
-                    parseFloat(markers[i].getAttribute("lng")));
-                var html = "<b>" + name + "</b> <br/>" + address;
-                var icon = customIcons[type] || {};
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: point,
-                    icon: icon.icon
-                });
-                bindInfoWindow(marker, map, infoWindow, html);
+        var customIcons = {
+            restaurant: {
+                icon: 'http://labs.google.com/ridefinder/images/mm_20_blue.png'
+            },
+            bar: {
+                icon: 'http://labs.google.com/ridefinder/images/mm_20_red.png'
             }
-        });
+        };
+
+        function load() {
+            var map = new google.maps.Map(document.getElementById("map"), {
+                center: new google.maps.LatLng(47.6145, -122.3418),
+                zoom: 13,
+                mapTypeId: 'roadmap'
+            });
+            var infoWindow = new google.maps.InfoWindow;
+
+            // Change this depending on the name of your PHP file
+            downloadUrl("hello.php", function(data) {
+                var xml = data.responseXML;
+                var markers = xml.documentElement.getElementsByTagName("marker");
+                for (var i = 0; i < markers.length; i++) {
+                    var name = markers[i].getAttribute("name");
+                    var address = markers[i].getAttribute("address");
+                    var type = markers[i].getAttribute("type");
+                    var point = new google.maps.LatLng(
+                        parseFloat(markers[i].getAttribute("lat")),
+                        parseFloat(markers[i].getAttribute("lng")));
+                    var html = "<b>" + name + "</b> <br/>" + address;
+                    var icon = customIcons[type] || {};
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: point,
+                        icon: icon.icon
+                    });
+                    bindInfoWindow(marker, map, infoWindow, html);
+                }
+            });
         }
 
         function bindInfoWindow(marker, map, infoWindow, html) {
@@ -103,33 +75,37 @@
 
         //]]>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
-</section>
 
+</head>
 
-
-
-
-
-
-
+<body onload="load()">
+<div id="map" style="width: 500px; height: 300px"></div>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
