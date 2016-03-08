@@ -7,10 +7,11 @@
 
 <?php
 
+
 echo "Hello World";
 
 
-/*
+
 $db = new mysqli(
     "bbsqldb.database.windows.net",
     "teamdsqldb",
@@ -21,7 +22,7 @@ $db = new mysqli(
 if (!$db) {
     die('Connect Error: ' . mysqli_connect_errno());
 }
-*/
+
 
 $sql_query = "SELECT * FROM B&B";
 // execute the SQL query
