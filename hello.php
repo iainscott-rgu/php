@@ -41,6 +41,17 @@ while($row = $result->fetch_array()){
 
 */
 
+
+/*
+
+
+echo ($row [bbname]);
+echo ($row [latitude]);
+echo ($row [longitude]);
+}
+
+*/
+
 function parseToXML($htmlStr)
 {
     $xmlStr=str_replace('<','&lt;',$htmlStr);
@@ -91,12 +102,3 @@ function parseToXML($htmlStr)
 
 
 
-/*
-
-
-echo ($row [bbname]);
-echo ($row [latitude]);
-echo ($row [longitude]);
-}
-
-*/
