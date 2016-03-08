@@ -9,15 +9,22 @@
         type="text/javascript"></script>
 <script type="text/javascript">
 
-function load() {
-var map = new google.maps.Map(document.getElementById("map"), {
-center: new google.maps.LatLng(47.6145, -122.3418),
-zoom: 13,
-mapTypeId: 'roadmap'
-});
-var infoWindow = new google.maps.InfoWindow;
 
+
+    var mapCanvas = document.getElementById("map");
+    var mapOptions = {
+        center: new google.maps.LatLng(51.5, -0.2), zoom: 10
+    }
+    var map = new google.maps.Map(mapCanvas, mapOptions);
 </script>
+
+
+
+
+    <div id="map" style="width:400px;height:400px;background:snow"></div>
+
+
+
 
 
 
