@@ -47,11 +47,11 @@ while($row = $result->fetch_array()){
 
         foreach ($st->fetchAll() as $row) {
 
-           }
+
         echo ($row [bbname]);
         echo ($row [latitude]);
         echo ($row [longitude]);
-
+        }
  }
     catch(PDOException $e)
     {print"$e";}
