@@ -12,27 +12,10 @@
 </head>
 <body>
 
-<section class="container" id="banner">
-    <div class="floatleft">
-        <img src = "assets/bnblogocroporange.png" id="img">
-    </div>
-    <div class="floatright">
-    </div>
-</section>
 
 
-<section class="container" id="navigation2">
-    <div>
-        <nav role="main">
-            <ul>
-                <li><a href="B&Bregistration.html">Contact</a></li>
-                <li><a href="B&Bregistration.html">Register</a></li>
-                <li><a href="OwnerSignIn.php">Member Area</a></li>
-                <li><a href="SearchBB.php">Search</a></li>
-            </ul>
-        </nav>
-    </div>
-</section>
+
+
 
 
 
