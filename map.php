@@ -5,12 +5,10 @@
     <title></title>
 </head>
 <body>
-<script src="https://maps.googleapis.com/maps/api/js"
-        type="text/javascript"></script>
-<script type="text/javascript">
+<script src="https://maps.googleapis.com/maps/api/js"></script>
 
 
-
+<script>
     var mapCanvas = document.getElementById("map");
     var mapOptions = {
         center: new google.maps.LatLng(51.5, -0.2), zoom: 10
