@@ -78,11 +78,10 @@ function parseToXML($htmlStr)
 
 
             echo '<marker ';
-            echo 'name="' . parseToXML($row['name']) . '" ';
+            echo 'name="' . parseToXML($row['bbname']) . '" ';
             echo 'address="' . parseToXML($row['address']) . '" ';
-            echo 'lat="' . $row['lat'] . '" ';
-            echo 'lng="' . $row['lng'] . '" ';
-            echo 'type="' . $row['type'] . '" ';
+            echo 'lat="' . $row['latitude'] . '" ';
+            echo 'lng="' . $row['longitude'] . '" ';
             echo '/>';
         }
 
