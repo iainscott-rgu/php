@@ -79,6 +79,7 @@ function parseToXML($htmlStr)
             echo 'address="' . parseToXML($row['address']) . '" ';
             echo 'lat="' . $row['latitude'] . '" ';
             echo 'lng="' . $row['longitude'] . '" ';
+            echo 'type="' . $row['type'] . '" ';
             echo '/>';
         }
 
