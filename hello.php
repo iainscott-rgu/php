@@ -8,7 +8,7 @@
 <?php
 
 
-echo "Hello World";
+echo "Hello World!!!";
 
 
 
@@ -27,16 +27,19 @@ if (!$db) {
 $sql_query = "SELECT * FROM B&B";
 // execute the SQL query
 $result = $db->query($sql_query);
+if (!$result) {
+    die('No query');
+}
 // iterate over $result object one $row at a time
 // use fetch_array() to return an associative array
-
+/*
 while($row = $result->fetch_array()){
     // print out fields from row of data
     echo $row['bbname'] . "<br>";
 }
 
 
-
+*/
 
 
 /*
